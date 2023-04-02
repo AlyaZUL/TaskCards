@@ -2,12 +2,10 @@
 main {
     display: flex;
     justify-content: space-evenly;
-}
-
-body {
-    background-color: aliceblue;
+    flex-wrap: wrap;
+    background-color: bisque;
     text-align: center;
-    padding: 100px 20px;
+    padding: 20px;
     color: white;
     font-size: 30px;
     font-weight: bold;
@@ -29,13 +27,14 @@ body {
     width: 100%;
     padding: 30px;
     text-align: left;
-    margin-left: 10px;
+    margin: 10px;
     display: flex;
     flex-direction: column;
     justify-content:space-evenly;
     position: relative;
     border-radius: 20px;
     overflow: hidden;
+    box-shadow: 1px 1px 3px 2px gray;
 }
 
 .number {
@@ -68,6 +67,7 @@ body {
 
 .box-card:hover:before {
     right: 60%;
+    opacity: 0.4;
 }
 
 .box-card:hover:after {
@@ -90,17 +90,17 @@ body {
     width: 100%;
 }
 
-.bg-color-1 {
+.bg-color-1:nth-child(3n+1) {
     background-color: #f7e8b1;
 background-image: linear-gradient(90deg, #f7e8b1 0%, #f131b7 100%);
 }
 
-.bg-color-2 {
+.bg-color-2:nth-child(3n-1) {
     background-color: #0093E9;
     background-image: linear-gradient(270deg, #0093E9 0%, #80D0C7 50%, #c9f0f9 100%);   
 }
 
-.bg-color-3 {
+.bg-color-3:nth-child(3n) {
     background-color: #08AEEA;
     background-image: linear-gradient(270deg, #08AEEA 0%, #2AF598 74%);
 }
